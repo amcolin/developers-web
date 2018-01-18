@@ -1,0 +1,36 @@
+.Header {
+  background-color: #222;
+  height: 180px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.Logo img {
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Menu li {
+  display: inline-block;
+  padding-right: 18px;
+}
+
+.Menu li a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+.Menu li a:hover {
+  color: #EEE;
+}
