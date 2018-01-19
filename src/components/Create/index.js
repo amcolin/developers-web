@@ -46,18 +46,6 @@ class Create extends Component {
       });
     }
 
-
-    // axios({
-    //   method: 'post',
-    //   url: 'http://localhost:8000/api/developers',
-    //     data: {
-    //       name: this.state.name,
-    //       company: this.state.company,
-    //       experience: this.state.experience
-    //     }
-
-    //   });
-
   }
 
   handleChangeName(event) {

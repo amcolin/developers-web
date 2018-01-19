@@ -1,6 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 // Assets
 import '../Home/home.css';
@@ -44,9 +45,9 @@ class Home extends Component {
           <div className="panel-footer">
             <div className="clearfix">
               <div className="pull-right">
-              <a className="btn btn-edit" title="Edit">
+              <Link to={`/edit/${developer.id}`} className="btn btn-edit" title="Edit">
                 <span className="fa fa-edit"></span>
-              </a>
+              </Link>
               <a className="btn btn-delete" title="Delete">
                 <span className="fa fa-times"></span>
               </a>

@@ -13,7 +13,7 @@ const AppRoutes = () =>
   <App>
     <Switch>
       <Route exact path="/create" component={Contact} />
-      <Route exact path="/edit" component={Edit} />
+      <Route exact path="/edit/:devId" component={Edit} />
       <Route exact path="/" component={Home} />
       <Route component={Page404} />
     </Switch>
