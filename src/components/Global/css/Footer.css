@@ -1,5 +1,42 @@
 .Footer {
+  background-color: #222;
+  height: 70px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.Logo img {
+  height: 80px;
+  float: left;
+
+}
+.header-title {
   margin: 0 auto;
   text-align: center;
-  width: 90%;
+  margin-top: 25px;
+  font-family: Diamonds-Regular;
+}
+
+
+.Menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Menu li {
+  display: inline-block;
+  padding-right: 18px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.Menu li a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+.Menu li a:hover {
+  color: #EEE;
 }

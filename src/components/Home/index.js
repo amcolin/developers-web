@@ -50,7 +50,7 @@ class Home extends Component {
                 <span className="fa fa-edit"></span>
               </Link>
               <Link to={`/delete/${developer.id}`} className="btn btn-delete">
-                <span className="fa fa-edit"></span>
+                <span className="fa fa-trash"></span>
               </Link>
 
 

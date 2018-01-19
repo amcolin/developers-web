@@ -1,19 +1,27 @@
+@font-face {
+  font-family: Diamonds-Regular;
+  src: url(../fonts/Diamonds-Regular.ttf);
+}
 .Header {
   background-color: #222;
-  height: 180px;
+  height: 130px;
   padding: 20px;
   color: white;
-  text-align: center;
+  text-align: left;
 }
 
 .Logo img {
   height: 80px;
+  float: left;
+
+}
+.header-title {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25px;
+  font-family: Diamonds-Regular;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 .Menu {
   margin: 0;
@@ -24,6 +32,8 @@
 .Menu li {
   display: inline-block;
   padding-right: 18px;
+  font-family: sans-serif;
+  font-size: 12px;
 }
 
 .Menu li a {

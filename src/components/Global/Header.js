@@ -17,15 +17,16 @@ class Header extends Component {
       <div className="Header">
         <div className="Logo">
           <img src={logo} alt="logo" />
-          <h2>{title}</h2>
-
-          <ul className="Menu">
-            {
-              items && items.map(
-                (item, key) => <li key={key}><Link to={item.url}>{item.title}</Link></li>
-              )
-            }
-          </ul>
+        </div>
+        <div className="header-title">
+        <h1>{title}</h1>
+        <ul className="Menu">
+          {
+            items && items.map(
+              (item, key) => <li key={key}><Link className="list-group-item active" to={item.url}>{item.title}</Link></li>
+            )
+          }
+        </ul>
         </div>
       </div>
     );

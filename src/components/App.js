@@ -16,7 +16,7 @@ class App extends Component {
     const { children } = this.props;
     return (
       <div className="App">
-        <Header title="List of Developers" items={items} />
+        <Header title="Developers ORSON SYSTEMS" items={items} />
         <Content  body={children} />
         <Footer />
       </div>
