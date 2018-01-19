@@ -1,6 +1,9 @@
 // Dependencies
 import React, { Component } from 'react';
+import {withRouter} from "react-router-dom";
 import axios from 'axios';
+// Assets
+import '../Create/create.css';
 
 
 
@@ -14,17 +17,46 @@ class Create extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    const history = this.props.history;
+    if (this.state.name === "")
+    {
+     alert("Por favor ingrese nombre del programador");
 
+    }
+    else if (this.state.company === "") {
+      alert("Por favor ingrese compañia del programador");
+    }
+    else if (this.state.experience === ""){
+      alert("Por favor ingrese años de experiencia del programador");
+    }
+    else {
+      const history = this.props.history;
       axios({
-        method: 'post',
-        url: 'http://localhost:8000/api/developers',
+      method: 'post',
+      url: 'http://localhost:8000/api/developers',
         data: {
           name: this.state.name,
           company: this.state.company,
           experience: this.state.experience
         }
+
+      })
+      .then(function(response) {
+        alert("Se creo un nuevo registro de programador");
+        history.push("/");
       });
+    }
+
+
+    // axios({
+    //   method: 'post',
+    //   url: 'http://localhost:8000/api/developers',
+    //     data: {
+    //       name: this.state.name,
+    //       company: this.state.company,
+    //       experience: this.state.experience
+    //     }
+
+    //   });
 
   }
 
@@ -40,48 +72,40 @@ class Create extends Component {
     this.setState({experience: event.target.value});
   }
 
-  // CreateDevelopers() {
-  //   axios.post('http://localhost:8000/api/developers',{
-  //     "name": "Pedro",
-  //     "company": "Fabrica",
-  //     "experience": 2
-  //   })
-  //   .then(function (response) {
-  //     console.log(response);
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-
-  // };
 
   render() {
     return (
-      <form className="white block form-inline" onSubmit={this.handleSubmit.bind(this)}>
-          <div className="row">
-          <div className="col-md-6">
-            <input value={this.state.name} className="fullwidth" type="text" placeholder="Nombre" onChange={this.handleChangeName}/>
-          </div>
-          <div className="col-md-6">
-            <input  value={this.state.company}  className="fullwidth" type="text" placeholder="Compañia" onChange={this.handleChangeCompany}/>
-          </div>
-          </div>
-          <div className="row">
-          <div className="col-md-4">
-            <input  value={this.state.experience}  className="fullwidth" type="text" placeholder="Años de experiencia" onChange={this.handleChangeExperience}/>
-          </div>
-          </div>
+      <div className="create-content">
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <div>
+            <div className="row custom-row">
+            <div className="col-md-12">
+              <input value={this.state.name} className="input-custom" type="text" placeholder="Nombre" onChange={this.handleChangeName}/>
+            </div>
+            </div>
+            <div className="row custom-row">
+            <div className="col-md-12">
+              <input  value={this.state.company}  className="input-custom" type="text" placeholder="Compañia" onChange={this.handleChangeCompany}/>
+            </div>
+            </div>
+            <div className="row custom-row">
+            <div className="col-md-12">
+              <input  value={this.state.experience}  className="input-custom" type="number" min="0" max="30" placeholder="Años de experiencia" onChange={this.handleChangeExperience}/>
+            </div>
+            </div>
 
-          <div className="row">
-          <div className="col-md-12">
-            <button className="btn btn-default" type="submit">
-              Enviar
-            </button>
-          </div>
+            <div className="row custom-row">
+            <div className="col-md-12">
+              <button className="btn btn-send" type="submit">
+                Enviar
+              </button>
+            </div>
+            </div>
           </div>
         </form>
+      </div>
     );
   }
 }
 
-export default Create;
+export default withRouter(Create);

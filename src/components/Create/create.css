@@ -1,0 +1,45 @@
+ .create-content {
+   margin: 0 auto;
+   width: 700px;
+   font-size: 20px;
+
+ }
+
+ .custom-row {
+   margin-top: 20px;
+ }
+
+ .input-custom {
+
+  display: block;
+  width: 100%;
+  padding: .700rem .75rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  -o-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.btn-send {
+  float: right;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  height: 40px;
+  width: 100px;
+  font-size: 14px;
+}
+
+.btn-se.btn-send {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}

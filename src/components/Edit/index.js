@@ -1,8 +1,11 @@
 // Dependencies
 import React, { Component } from 'react';
+import Home from '../Home';
 
-class About extends Component {
+class Edit extends Component {
   render() {
+    // console.log(this.state.developers)
+
     return (
       <div className="About">
         <h1>About Page</h1>
@@ -11,4 +14,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Edit;
