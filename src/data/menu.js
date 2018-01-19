@@ -1,6 +1,6 @@
 export default [
   {
-    title: 'Home',
+    title: 'Lista',
     url: '/'
   },
   {
@@ -8,7 +8,7 @@ export default [
     url: '/about'
   },
   {
-    title: 'Contact Us',
-    url: '/contact'
+    title: 'Nuevo',
+    url: '/create'
   }
 ];

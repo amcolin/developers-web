@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './css/Content.css';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
+// import './css/Content.css';
 
 class Content extends Component {
   static propTypes = {

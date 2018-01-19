@@ -1,8 +1,10 @@
 // Dependencies
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
-import { Button } from 'react-bootstrap';
+
+// Assets
+import '../Home/home.css';
+import pic from '../Global/images/smug.png';
 
 class Home extends Component {
   constructor(props) {
@@ -27,7 +29,36 @@ class Home extends Component {
   _renderDeveloper(developer) {
 
     return (
-    <th key={developer.id}>{developer.name}{developer.company}</th>
+      <div className="col-sm-6 col-md-3" key={developer.id}>
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h4 className="panel-title">{developer.name}</h4>
+          </div>
+          <div className="panel-body text-center nopadding">
+            <a><img src={pic} alt="pic" width="150px" /></a>
+          </div>
+          <div className="panel-body text-center nopadding">
+            <h3>Compañia: {developer.company}</h3>
+            <h4>Años de experiencia: {developer.experience} </h4>
+          </div>
+          <div className="panel-footer">
+            <div className="clearfix">
+              <div className="pull-right">
+              <a className="btn btn-edit" title="Edit">
+                <span className="fa fa-edit"></span>
+              </a>
+              <a className="btn btn-delete" title="Delete">
+                <span className="fa fa-times"></span>
+              </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    // <h4 key={developer.id}>{developer.name}</h4>
     // <th key={developer.id}>{developer.company}</th>
 
 
@@ -44,21 +75,14 @@ class Home extends Component {
     console.log(name);
 
     return (
-      <div className="Home">
-        <table>
-          <tr>
-            <th>First Name</th>
-            <th>Company</th>
-            <th>Experience</th>
-          </tr>
-          <tr>
+      <div className="Home developer-content">
           {this.state.developers.map(this._renderDeveloper)}
-          </tr>
-        </table>
-
 
 
       </div>
+
+
+
     );
   }
 }

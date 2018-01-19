@@ -1,0 +1,31 @@
+.developer-content {
+  margin-top: 40px;
+}
+
+.btn-edit {
+  color: #fff;
+  background-color: #f6bb42;
+  border-color: #f6bb42;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.btn-edit:hover {
+  background-color: #f4a911;
+  border-color: #efa50b;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #ec6f5a;
+  border-color: #ec6f5a;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.btn-delete:hover {
+  background-color: #e7472c;
+  border-color: #e63f23;
+}
