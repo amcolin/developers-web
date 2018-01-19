@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -101,10 +103,15 @@ class Edit extends Component {
             </div>
 
             <div className="row custom-row">
-            <div className="col-md-12">
+            <div className="col-md-10">
               <button className="btn btn-send" type="submit">
                 Enviar
               </button>
+            </div>
+            <div className="col-md-2">
+              <Link to="/" className="btn btn-cancel">
+                Cancelar
+              </Link>
             </div>
             </div>
           </div>

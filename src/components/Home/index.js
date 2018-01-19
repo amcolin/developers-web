@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+
 // Assets
 import '../Home/home.css';
 import pic from '../Global/images/smug.png';
@@ -48,9 +49,10 @@ class Home extends Component {
               <Link to={`/edit/${developer.id}`} className="btn btn-edit" title="Edit">
                 <span className="fa fa-edit"></span>
               </Link>
-              <a className="btn btn-delete" title="Delete">
-                <span className="fa fa-times"></span>
-              </a>
+              <Link to={`/delete/${developer.id}`} className="btn btn-delete">
+                <span className="fa fa-edit"></span>
+              </Link>
+
 
               </div>
             </div>

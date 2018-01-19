@@ -38,8 +38,24 @@
   font-size: 14px;
 }
 
-.btn-se.btn-send {
-  color: #fff;
+.btn-send:hover {
   background-color: #0069d9;
   border-color: #0062cc;
+  color: #fff;
+}
+
+.btn-cancel {
+  padding-top: 9px;
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  height: 40px;
+  width: 100px;
+  font-size: 14px;
+}
+
+.btn-cancel:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
 }
