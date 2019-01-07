@@ -25,3 +25,5 @@ Dependencias
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"
 ```
+
+![alt text](https://github.com/amcolin/developers-web/blob/master/public/home.png)
